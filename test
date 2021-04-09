@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--- Jill is bae --->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> all about JILL - The best dog to walk the earth</title>
+		<style>
+			.dog{
+			font-family:"chaucer",serif;
+			color:brown;
+			<!---span.cell--->
+			}
+			body{
+			background-color: rgb(197,207,239);
+			cursor:wait;
+			}
+			#beagle{
+			float:left;
+			padding-right:4px;
+			}
+			.doom{
+			border:4px rgb(164, 168, 173);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<span style="cursor:not-allowed">
+		<h1 class="dog"> Jill </h1>
+		</span>
+		<span style="cursor:not-allowed">
+		<img class="doom dog" src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg" alt="Jill" style="height:305px">
+		</span>
+		<img class="doom dog" id="beagle" src=Beagle_portrait_Camry.jpg style="height:305px">
+		<span style="cursor:not-allowed">
+		<p class="dog">A low-quality reproduction of Jill</p>
+		<a target="_blank" href="file:C:\Scripts\Useless\big and important.html"> Click here for big important secret stuff<sup> tm</sup></a>
+		<br>
+		<a target="_blank" href="file:C:\Scripts\Open at your own risk\NOT_VIRUS.js"> DO NOT CLICK</a>
+		</span>
+		
+	</body>
+</html>
+<!--- Table format-
+<table>
+	<thead>
+		<tr>(tabular row)
+			<th>(tabular head)</th>
+			<th>(tabular head)</th>
+			<th>(tabular head)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>(Tabular data)</td>
+			<td>(Tabular data)</td>
+			<td>(Tabular data)</td>
+		</tr>
+		<tr>
+			<td>(Tabular data)</td>
+			<td>(Tabular data)</td>
+			<td>(Tabular data)</td>
+		</tr>
+		<tr>
+			<td>(Tabular data)</td>
+			<td>(Tabular data)</td>
+			<td>(Tabular data)</td>
+		</tr>
+	</tbody>
+</table>
+link coloring:
+a:link;
+a:visited;
+a:hover;
+a:active;
+a:focus;
+to do- image links and in-text links
+--->
