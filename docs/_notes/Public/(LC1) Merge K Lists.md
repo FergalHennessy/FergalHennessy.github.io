@@ -1,6 +1,6 @@
 ---
 
-title: (LC1) Merge K Lists
+title:(LC1) Merge K Lists
 feed: hide
 date: 1/08/2024
 
