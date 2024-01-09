@@ -57,10 +57,62 @@ public:
 };
 ```
 
-Runtime Analysis: Assuming *n* lists with an average size of *k*, we note that the first merger has *2k* comparisons, the second *3k*, and so on until the final list has *(n+1)k* comparisons for  a total O(n^2\*k) runtime
+Runtime Analysis: Assuming *k* lists with an average size of *n*, we note that the first merger has *2n* comparisons, the second *3n*, and so on until the final list has *(k+1)n* comparisons for  a total O(k^2\*n) runtime
 
-It's possible to do a little better with this pairs strategy by using a queue: we can merge lists of the same size and push the resulting bigger list to the back of a queue. Using this strategy, our runtime is O(n\*k\*log(n)).
+It's possible to do better with this pairs strategy by using a queue: we can merge lists of the same size and push the resulting bigger list to the back of a queue. Using this strategy, our runtime is *O(n\*k\*log(k))*.
 
-But can we do better?
+```
+class Solution{
+private:
+	ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
+		if(l1 == nullptr) return l2;
+		if(l2 == nullptr) return l1;
+		if(l1->val < l2->val){
+			l1->next = mergeTwoLists(l1->next, l2);
+			l1 = l1->next;
+		}else{
+			l2->next = mergeTwoLists(l1, l2->next)l;
+			l2 = l2->next;
+		}
+	}
+public:
+	ListNode* mergeKLists(vector<ListNode*>& lists){
+		if(lists.size() == 0) return nullptr;
+		for(int i = 0; i + 1 < lists.size(); i+=2){
+			lsits.push_back(mergeTwoLists(lists[i], lists[i+1]));
+		}
+		return lists[i];
+	}
+}
+```
 
 ### Solution 2 : MinHeap
+
+A different approach to this problem, that ends up having the same asymptotic runtime, uses priority queues instead of simple queues to order the data. The idea behind this solution is placing all the linked lists in a big minHeap, sorted by the first element of each linked list. This way, the linked list node that we are interested in will always be at the top of the heap. We can build a new linked list by popping the least element from the top of the minHeap in a loop, then push the rest of the loop back to the minHeap.
+
+```
+class Solution{
+	ListNode* mergeKLists(vector<ListNode*> lists){
+		auto compare = [](ListNode* a, ListNode* b){return a->val > b->val;};
+		priority_queue<ListNode*, vector<ListNode*>, decltype(compare)> minHeap(compare);
+		
+		for(list : lists){
+			if(list)minHeap.push(list);
+		}
+		ListNode dummy = ListNode(0);
+		ListNode* tail = &dummy;
+		while(!minHeap.empty){
+			//add the least element to tail
+			tail->next = minHeap.top();
+			minHeap.pop();
+			tail = tail->next;
+			//push the remaining list back to the heap
+			if(tail->next) minHeap.push(tail->next);
+		}
+		return dummy.next;
+	}
+}
+```
+
+Runtime Analysis:
+As above, assuming *k* lists with *n* members per list, the initial building of the minHeap takes *O(k\* log(k))* time. When building our solution linked list, we have n\*k insertions, each of which takes *O(log(k))* time, giving us an asymptotic runtime of *O(n \* k \* log(k))*, the same as above.
