@@ -1,6 +1,6 @@
 ---
 
-title:(LC1) Merge K Lists
+title:Merge K Lists
 feed: show
 date: 1/08/2024
 
@@ -25,9 +25,9 @@ You are given an array of k linked-lists `lists`, where each linked list is sort
 ```
 
 #### Examples:
-lists = \[\[1, 4, 5\], \[1, 3, 4\], \[2, 6\]\] -->  \[1, 1, 2, 3, 4, 4, 5, 6\]
-lists = \[\] --> \[\]
-lists = \[\[\]\]
+lists = $$[[1, 4, 5], [1, 3, 4], [2, 6]]$$ -->  $$[1, 1, 2, 3, 4, 4, 5, 6]$$
+lists = $$[]$$ --> $$[]$$
+lists = $$[[]]$$
 
 ### Solution 1 : Pairs
 Because merging two lists is simple, one intuitive approach could be to merge greedily, merging list 1 with list 2, the result with list 3, and so on. Writing it up quickly, we might get some code that looks like this:
