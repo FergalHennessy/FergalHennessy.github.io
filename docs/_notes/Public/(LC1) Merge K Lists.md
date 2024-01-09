@@ -1,7 +1,7 @@
 ---
 
 title:(LC1) Merge K Lists
-feed: hide
+feed: show
 date: 1/08/2024
 
 ---
