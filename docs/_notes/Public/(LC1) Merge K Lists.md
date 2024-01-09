@@ -57,7 +57,7 @@ public:
 };
 ```
 
-Runtime Analysis: Assuming *k* lists with an average size of *n*, we note that the first merger has *2n* comparisons, the second *3n*, and so on until the final list has *(k+1)n* comparisons for  a total O(k^2\*n) runtime
+Runtime Analysis: Assuming *k* lists with an average size of *n*, we note that the first merger has *2n* comparisons, the second *3n*, and so on until the final list has *(k+1)n* comparisons for  a total $$O(k^2\*n)$$ runtime
 
 It's possible to do better with this pairs strategy by using a queue: we can merge lists of the same size and push the resulting bigger list to the back of a queue. Using this strategy, our runtime is *O(n\*k\*log(k))*.
 
