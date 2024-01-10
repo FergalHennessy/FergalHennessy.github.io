@@ -2,5 +2,5 @@
 ---
 
 {%- for post in site.posts -%}
-{{ post.title | strip_html | escape }}{% unless foorloop.last %};{% endunless %}
+{{ post.title | strip_html | escape }}{% unless forloop.last %};{% endunless %}
 {%- endfor -%}

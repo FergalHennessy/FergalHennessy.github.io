@@ -71,7 +71,7 @@ collections:
       permalink: /note/:title
 
 markdown: kramdown
-
+future: true 
 kramdown:
   input: GFM
   hard_wrap: false
