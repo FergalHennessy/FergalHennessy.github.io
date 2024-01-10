@@ -2,15 +2,6 @@
 title: Template
 feed: hide
 date: 11/09/2024
-tags:
-  - easy
-  - medium
-  - hard
-  - stack
-  - heap
-  - dp
-  - divconq
-leetcode: "0"
 ---
 
 ## Template
