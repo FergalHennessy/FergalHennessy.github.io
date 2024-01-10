@@ -1,6 +1,6 @@
 ---
 title: Template
-feed: show
+feed: hide
 date: 11/09/2024
 tags:
   - easy
