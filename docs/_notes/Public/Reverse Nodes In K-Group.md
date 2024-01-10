@@ -61,7 +61,7 @@ ListNode* reverseKGroup(ListNode* head, int k){
 ```
 
 Runtime Analysis:
-The runtime of this function is O(n), as each node is traversed twice.
+The runtime of this function is O(n), as each node is traversed at most twice.
 The space complexity of this function is O(n) due to call stacks and its recursive nature.
 This function is easy to understand as is, but to reduce the space complexity we can rewrite it to be iterative.
 

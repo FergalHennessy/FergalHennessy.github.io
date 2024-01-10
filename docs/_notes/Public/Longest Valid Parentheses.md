@@ -11,9 +11,9 @@ leetcode: 32
 You are given a string s containing just the characters '(' and ')'.
 *return the length of the longest valid (well-formed) parentheses substring*
 ### Examples
-Input = "(()" --> 2 <br>
-Input = ")()())" --> 4 <br>
-Input = " --> 0
+Input =`" (()"` --> 2 <br>
+Input = `")()())"` --> 4 <br>
+Input = `""` --> 0
 
 ## Solution 1: 
 
