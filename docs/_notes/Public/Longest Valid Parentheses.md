@@ -1,7 +1,7 @@
 ---
 title: Longest Valid Parentheses
 feed: show
-date: 1-09-2024
+date: 2024-01-09
 tags: hard stack dp
 leetcode: 32
 ---
@@ -11,8 +11,8 @@ leetcode: 32
 You are given a string s containing just the characters '(' and ')'.
 *return the length of the longest valid (well-formed) parentheses substring*
 ### Examples
-Input = "(()" --> 2
-Input = ")()())" --> 4
+Input = "(()" --> 2 <br>
+Input = ")()())" --> 4 <br>
 Input = " --> 0
 
 ## Solution 1: 
