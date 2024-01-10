@@ -1,7 +1,9 @@
 ---
 title: Longest Valid Parentheses
 feed: show
-date: 1/09/2024
+date: 1-09-2024
+tags: hard stack dp
+leetcode: 32
 ---
 
 ## Longest Valid Parentheses
