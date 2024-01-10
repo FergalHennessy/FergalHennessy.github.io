@@ -1,8 +1,9 @@
 ---
-title:Longest Valid Parentheses
+title: Longest Valid Parentheses
 feed: show
 date: 1/09/2024
 ---
+
 ## Longest Valid Parentheses
 
 You are given a string s containing just the characters '(' and ')'.
