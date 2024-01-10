@@ -8,7 +8,7 @@ leetcode: 32
 
 ## Longest Valid Parentheses
 
-You are given a string s containing just the characters '(' and ')'.
+You are given a string s containing just the characters '(' and ')'.<br>
 *return the length of the longest valid (well-formed) parentheses substring*
 ### Examples
 Input =`" (()"` --> 2 <br>
@@ -19,9 +19,9 @@ Input = `""` --> 0
 
 Noting that computing the longest substring at any given point in the string requires memory of previous longest substrings, we decide to use dynamic programming. We can determine the longest substring at the ith index with the following recurrence relations:
 
-1. If \$s[i] == '('\$  longest = 0
-2. if $s[i] == ')'$  && $s[i-1] == '('$  longest = $dp[i-2] + 2$
-3. if $s[i] == ')'$  &&  $s[i - s[i-1] -1] == '('$  longest = $dp[i-1] + dp[i-dp[i-1] - 2] + 2$
+1. If `s[i] == '('`  longest = 0
+2. if `s[i] == ')'`  && `s[i-1] == '('`  longest = `dp[i-2] + 2`
+3. if `s[i] == ')'`  &&  `s[i - s[i-1] -1] == '('`  longest = `dp[i-1] + dp[i-dp[i-1] - 2] + 2`
 
 where equation 3 uses the previously computed longest strings to determine whether a large containing set of parentheses exists
 
@@ -52,9 +52,9 @@ public:
 
 Noting that, generally speaking, we need to store only the indexes of most recent open parentheses and any orphan close parentheses that break up substrings, it looks like we can use a stack for this problem. In general, there are three cases:
 
-1. If $str[i] == '('$ push i to stack
-2. if $str[i] == ')'$  && $s[stack.top] == '('$ pop from stack
-3. else push i to stack ($s[i]$ is an orphan)
+1. If `str[i] == '('` push i to stack
+2. if `str[i] == ')'`  && `s[stack.top] == '('` pop from stack
+3. else push i to stack (`s[i]` is an orphan)
 
 Afterwards, if the stack is not empty, we pop from stack and return the longest sequence.
 Adding some edge cases and then typing this up, we obtain
