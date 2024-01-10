@@ -1,5 +1,5 @@
 ---
-title: Template
+title:Template
 feed: hide
 date: 11/09/2024
 ---
