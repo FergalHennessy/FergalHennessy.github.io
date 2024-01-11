@@ -69,3 +69,41 @@ Both space and time are cubic: can we do better? Looking at this solution, we do
 
 ### Solution 2: Sliding Window Hashmap Comparison
 
+Being able to return the answer in any order turns out to be helpful as characters that are the same index mod w are processed together as potential start indices for the substring.
+
+```
+class Solution{
+public:
+	vector<int> findSubstring(string s, vector<string>& words){
+		int n = s.size();
+		int m = words.size(), w = words[0].size();
+		unordered_map<string, int> total;
+		
+		for(string& word : words){
+			total[word]++;
+		}
+		
+		vector<int> res;
+		for(int i = 0; i < w; i++){
+			unordered_map<string, int> prospect;
+			string t = "";
+			for(int j = i, k = i; k < n; k++){
+				t += s[k];
+				if(t.size() == w){
+					prospect[t]++;
+					t = "";
+				}
+				if(k-j+1 == m*w){
+					if(prospect == total)res.push_back(j);
+					string remove = s.substr(j, w);
+					if(prospect[remove] > 1) prospect[remove]--;
+					else prospect.erase(remove);
+					j+=w;
+				}
+			}
+		}
+		return res;
+	}
+};
+```
+
