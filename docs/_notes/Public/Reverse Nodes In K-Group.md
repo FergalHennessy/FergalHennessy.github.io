@@ -3,7 +3,7 @@ title: Reverse Nodes In K-Group
 feed: show
 date: 2024-01-10
 tags: hard linked-list recursion
-leetcode: 0
+leetcode: 25
 ---
 
 

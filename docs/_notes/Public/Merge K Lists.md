@@ -2,7 +2,8 @@
 title: Merge K Lists
 feed: show
 date: 2024-01-08
-
+tags: hard heap queue divConq
+leetcode: 23
 ---
 
 ## Merge K Lists
