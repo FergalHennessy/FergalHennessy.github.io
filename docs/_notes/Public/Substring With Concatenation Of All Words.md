@@ -16,7 +16,7 @@ A **concatenated substring** in `s` is a substring that contains all the strings
 
 ## Examples
 
-**Input: ** `s = "barfoothefoobarman", words = ["foo, bar"]` --> `[0, 9]`
+__Input: __ `s = "barfoothefoobarman", words = ["foo, bar"]` --> `[0, 9]`
 **Input: ** `s = "wordgoodgoodgoodbestword", words = ["word", "good", "best", "word"]` --> `[]`
 
 ### Solution 1: Brute Force Hashmap Comparison
