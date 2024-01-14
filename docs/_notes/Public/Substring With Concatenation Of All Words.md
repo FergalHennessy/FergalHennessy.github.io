@@ -16,8 +16,8 @@ A **concatenated substring** in `s` is a substring that contains all the strings
 
 ## Examples
 
-__Input: __ `s = "barfoothefoobarman", words = ["foo, bar"]` --> `[0, 9]`
-**Input: ** `s = "wordgoodgoodgoodbestword", words = ["word", "good", "best", "word"]` --> `[]`
+**Input:**`s = "barfoothefoobarman", words = ["foo, bar"]` --> `[0, 9]` <br>
+**Input:** `s = "wordgoodgoodgoodbestword", words = ["word", "good", "best", "word"]` --> `[]`
 
 ### Solution 1: Brute Force Hashmap Comparison
 
@@ -69,7 +69,17 @@ Both space and time are cubic: can we do better? Looking at this solution, we do
 
 ### Solution 2: Sliding Window Hashmap Comparison
 
-Being able to return the answer in any order turns out to be helpful as characters that are the same index mod w are processed together as potential start indices for the substring.
+We can use a sliding window approach to avoid duplicate comparisons. As before, let the size of `s` be `n`, let the number of elements in `words` be `m`, let the length of a word in `words` be `w`.   Because hashmaps can only be recycled when the next hashmap begins a multiple of `w` away, we will need an outer loop of size n. Our solution has three steps:
+
+1. Create a hashmap (`total`) of all strings in words, with higher values corresponding to more occurrences
+2. Loop through all possible remainders (mod `w`). In each iteration:
+	1. create a new hashmap `prospect`, and a new string `t`
+	2. Create a loop of length `n` to loop through the characters in `s`. In each iteration:
+		1. increment `t` until it is length `w`, then add `t` to `prospect`
+		2. when your window size has reached the size of a concatenated string, check whether `prospect` == `total`. If it does, save the start of the window.
+3. return the list of valid starting indices
+
+Coding this up:
 
 ```
 class Solution{
