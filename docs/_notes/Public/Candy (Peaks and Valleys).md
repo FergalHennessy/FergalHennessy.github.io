@@ -21,7 +21,7 @@ Return *the minimum number of candies you need to have to distribute the candies
 **Input:** `ratings = [1, 2, 2]` --> `4` <br>
 **Explanation:** The first, second and third child can be given 1, 2, and 1 candies respectively as it satisfies the above conditions.
 
-### Solution 1: Two Pass Array Construction
+## Solution 1: Two Pass Array Construction
 There are two conditions on each of the childrens' candy amounts: One from the left, and one from the right. To solve the problem, we use two passes: one to ensure that the candy distribution satisfies the minimum demand from the left, and one to ensure that the candy distribution satisfies the minimum demand from the right (while also satisfying the left side's requirements). The algorithm has three steps:
 1. Create a new array `candies` with the same length as `ratings` and set `candies[0]=1`
 2. Iterate through `ratings` and `candies` from the left: if `ratings[i] > ratings[i-1]` then `candies[i] = candies[i-1] + 1`
