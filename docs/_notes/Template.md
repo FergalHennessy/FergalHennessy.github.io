@@ -14,7 +14,8 @@ leetcode: 0
 
 ## Examples
 
-$latex$
+\$$latex$$(use <br>)
+**explanation** 
 
 ### Solution 1:
 

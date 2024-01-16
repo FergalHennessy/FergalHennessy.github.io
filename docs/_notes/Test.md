@@ -6,7 +6,7 @@ tags: easy medium hard stack heap queue dp divconq
 leetcode: 0
 ---
 
-$test \quad x^2 \quad \frac{1}{test} \frac{1}{\text{test}}$
+\$$test \quad x^2 \quad \frac{1}{test} \frac{1}{\text{test}}$$
 
 \\\(test \quad x^2 \quad \frac{1}{test} \frac{1}{\text{test}}\\\)
 

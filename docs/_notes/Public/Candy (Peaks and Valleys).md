@@ -1,7 +1,7 @@
 ---
 title: Candy (Peaks and Valleys)
 feed: show
-date: 2022-01-14
+date: 2024-01-14
 tags: hard two-pass greedy
 leetcode: 135
 ---
@@ -16,9 +16,9 @@ Return *the minimum number of candies you need to have to distribute the candies
 
 ## Examples
 
-**Input:** `ratings = [1, 0, 2]` --> `5`
-**Explanation:** The first, second, and third child can be given 2, 1, and 2 candies respectively
-**Input:** `ratings = [1, 2, 2]` --> `4`
+**Input:** `ratings = [1, 0, 2]` --> `5` <br>
+**Explanation:** The first, second, and third child can be given 2, 1, and 2 candies respectively. <br>
+**Input:** `ratings = [1, 2, 2]` --> `4` <br>
 **Explanation:** The first, second and third child can be given 1, 2, and 1 candies respectively as it satisfies the above conditions.
 
 ### Solution 1: Two Pass Array Construction

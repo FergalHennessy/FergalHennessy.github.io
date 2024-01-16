@@ -58,6 +58,7 @@
     <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" media="all" class="default" />
     <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" media="all" class="default" />
     <link href="{{ site.baseurl }}/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+    <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
     <link href="{{ site.baseurl }}/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" />
     
     
@@ -95,17 +96,20 @@
 
             <!--- Notes Feed Layout-->
             {%- if page.feedformat -%}
-            <div class="column is-6-widescreen  is-8-desktop is-8-tablet is-12-mobile">
+            <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
                 <h5 class="meta-title"><a href="/">← Home</a></h5>
                     <div class="jumbo">{{page.title}}</div>
                     {%- include Content.html -%}
                     {%- include Feed.html -%}
             {%- endif -%}
 
+            <!--- Change Bulma Layout Here-->
             <!--- Notes Layout-->
             {%- if page.content-type == "notes" -%}
-            <div class="column is-5-widescreen  is-6-desktop is-8-tablet is-12-mobile">
+            <div class="column is-7-widescreen  is-8-desktop is-9-tablet is-12-mobile">
                     <div class="note-page-section">
+                        <!--This needs to get fixed, like i need to keep the last visited site in session storage maybe?-->
+                        <!--There's a duplicate of this for posts instead of notes-->
                         <div>
                             {%- if site.preferences.homepage.enabled -%}
                             <a onclick="window.history.back();">
@@ -115,6 +119,7 @@
                                     <h5 class="meta-title">← BACK</h5>
                             </a>
                         </div>
+                            
                     <!--- List type Note Layout-->
                     {%- if page.format == "list" -%}
                     <style>
@@ -123,7 +128,17 @@
                         h3 {padding-top: 1rem; padding-bottom: 0rem;}
                     </style>                    
                     {%- endif -%}
-                    <h1>{{page.title}}</h1>
+
+                    <div class = "title-and-tags">
+                        <h1>{{page.title}}</h1>
+                        <div class = "tags">
+                            {% assign tag-array = page.tags %}
+                            <script>console.log("the tags are: {{tag-array}}")</script>
+                            {% for item in tag-array %}
+                                <span class="tag">{{ item }}</span>
+                            {%- endfor -%}
+                        </div>
+                    </div>
                     {%- include Content.html -%}
                     {%- include Backlinks.html -%}
                     </div>
