@@ -55,10 +55,17 @@ public:
 
 ## Solution 2: One Pass Greedy Algorithm
 
-We have a solution that uses linear space, but can we do better? 
+We have a solution that uses linear space, but can we do better? How could we calculate the sum of all childrens' candies at the same time? We can accomplish constant space complexity with streak tracking.
 
+To calculate the sum of all childrens' candy, we initialize `candy` to n, as each child must have at least one candy. We iterate through `ratings`, comparing `ratings[i]` to `ratings[i-1]`. At each point, there are 3 cases:
+1. `ratings[i] > ratings[i-1]` : In this case, the candies allocated to child `[i]` will be one higher than the candies allocated to child `[i-1]`. Begin a count of increasing streaks, add the current streak to `candy` and increase the streak.
+2. `ratings[i] < ratings[i-1]` : In this case, the candies allocated to child `[i-1]` must have been one higher than the candies allocated to child `[i]`. Because the last child in a downward streak always gets one candy, the second-last two candies, etc., we keep track of the streak of downward ratings, with knowledge that the minimum sum is the triangular number corresponding to the streak. 
+3. `ratings[i] == ratings[i-1]` : In this case, the candies allocated to child `[i]` can be 1, so we break out of our loop iteration and reset both downward and upward streaks.
+In each case, we check if the current streak can be continued before checking for other conditions. 
 
+Because an upward streak of `upstreak` and a downward streak of `downstreak` would result in double counting at the child where the upward streak ends and the downward streak begins, we save `upstreak` and `downstreak` and subtract `std::min(upstreak, downstreak)` from `candy` after each downward streak.
 
+Translating this algorithm into code, we get the following solution:
 ```
 class Solution {
 public:
@@ -70,25 +77,28 @@ public:
 				i++;
 				continue;
 			}
-			//For increasing slope
-			int peak = 0;
-			while(ratings[i] > ratings [i-1]){
+
+			int upstreak = 0;
+			while(i<n && ratings[i] > ratings [i-1]){
 				peak++;
 				candy += peak;
 				i++;
-				if(i == n) return candy;
 			}
-			//For decreasing slope
-			int valley = 0;
+
+			int downstreak = 0;
 			while(i<n && ratings[i] < ratings[i-1]){
 				valley++;
 				candy += valley;
 				i++;
 			}
-			candy -= min(peak, valley); //Keep only the higher peak
+			candy -= min(upstreak, downstreak); //Keep only the higher peak
 		}
 		return candy;
 	}
 };
 
 ```
+
+##### Runtime Analysis
+- In this solution, we iterate through `ratings` once, performing a constant time operation on each member. Therefore, the time complexity is `O(n)`.
+- The only memory used is two temporary integers `upstreak` and `downstreak`. Therefore, the space complexity is `O(1)`.

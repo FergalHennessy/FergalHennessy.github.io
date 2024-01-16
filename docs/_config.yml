@@ -71,7 +71,7 @@ collections:
       permalink: /note/:title
     tags:
       output: true
-      permalink: /tag/:title
+      permalink: /tags/:title
 
 markdown: kramdown
 future: true 
@@ -104,6 +104,7 @@ defaults:
       type: tags
     values:
       layout: tags
+      content-type: tags
 
 
 # Exclude from processing.
