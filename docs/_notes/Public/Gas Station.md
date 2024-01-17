@@ -1,7 +1,7 @@
 ---
 title: Gas Station
 feed: show
-Date: 2024-16-1
+date: 2024-16-1
 tags: medium array greedy
 ---
 
