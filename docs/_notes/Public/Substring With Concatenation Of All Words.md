@@ -1,7 +1,7 @@
 ---
 title: Substring With Concatenation Of All Words
 feed: show
-date: 2024/01/11
+date: 2024-01-11
 tags: hard hashmap sliding-window
 leetcode: 30
 ---
