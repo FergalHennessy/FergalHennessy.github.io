@@ -27,3 +27,6 @@ TODO:
 is there a way to do right-aligned comments in code sections?
 nicer lc style formatting for code blocks
 make a real homepage
+
+
+im just going to work straight for the next 24 hours. no sleep, no breaks, nothing. afterwards, some sleep. Love you.
