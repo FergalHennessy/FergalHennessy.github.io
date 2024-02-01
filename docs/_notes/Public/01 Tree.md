@@ -2,7 +2,7 @@
 title: 01 Tree
 feed: show
 date: 2024-01-19
-tags: hard tree greedy leetcode-2100
+tags: hard tree greedy codeforces-2100
 ---
 
 There is an edge-weighted complete binary tree with *n* leaves. A complete binary tree is defined as a tree where every non-leaf vertex has exactly 2 children. For each non-leaf vertex, we label one of its children as the left child, and the other as the right child.

@@ -2,7 +2,7 @@
 title: Remove Duplicates From Sorted Array
 date: 2024-1-31
 feed: show
-tags: two-pointer
+tags: two-pointer medium
 leetcode: 80
 ---
 
