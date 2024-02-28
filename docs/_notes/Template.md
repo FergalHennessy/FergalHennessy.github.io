@@ -27,6 +27,8 @@ TODO:
 is there a way to do right-aligned comments in code sections?
 nicer lc style formatting for code blocks
 make a real homepage
+proving every theorem in the matrix cookbook (no bitchmode)
 
-
-im just going to work straight for the next 24 hours. no sleep, no breaks, nothing. afterwards, some sleep. Love you.
+Feb 5:
+CS177 homework(finish by 9 pm)
+CS189 homework(finish by 12 am)

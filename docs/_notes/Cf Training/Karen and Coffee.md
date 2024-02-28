@@ -10,7 +10,7 @@ You know n coffee recipes, and the *i*-th recipe suggests that coffee should be 
 
 ## Input
 
-The first line of input contains three integers *n*, *k* $(1\leq k \leq n \leq 200000)$, and *q* $1(\leq k \leq n \leq 200000)$, the number of recipes, the minimum number of recipes a certain temperature must be recommended  by to be admissible, and the number of questions Karen has, respectively.
+The first line of input contains three integers *n*, *k* $(1\leq k \leq n \leq 200000)$, and *q* $(\leq k \leq n \leq 200000)$, the number of recipes, the minimum number of recipes a certain temperature must be recommended  by to be admissible, and the number of questions Karen has, respectively.
 
 The next *n* lines describe the recipes. Specifically, the *i*-th line among these contains two integers $l_i$ and $r_i$ $(1 \leq l_i \leq r_i \leq 200000)$, describing that the *i*-th recipe suggests that the coffee be brewed between $l_i$ and $r_i$ degrees, inclusive.
 
