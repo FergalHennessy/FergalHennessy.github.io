@@ -23,3 +23,11 @@ Parentheses inline: \\(test \quad x^2 \quad \frac{1}{test} \frac{1}{\text{test}}
 `\[[1, 4, 5], [1, 3, 4], [2, 6]\]`
 
 `[[1, 4, 5], [1, 3, 4], [2, 6]]`
+
+$$[ test1, test1]$$
+
+$$\[ test2, test2 \]$$
+
+\\\( \[test3, test3 \]\\\)
+
+\\\( \[test4, test4 \]\\\)
