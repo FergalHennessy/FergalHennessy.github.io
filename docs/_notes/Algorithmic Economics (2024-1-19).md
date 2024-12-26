@@ -1,6 +1,6 @@
 ---
 title: Algorithmic Economics (2024-1-19)
-feed: show
+feed: hide
 date: 2024-1-19
 ---
 
