@@ -1,6 +1,6 @@
 ---
 title: Stochastic Processes (2024-1-17)
-feed: show
+feed: hide
 date: 2024-1-17
 ---
 
