@@ -23,7 +23,7 @@ url: "http://www.hennessy.page" # the base hostname & protocol for your site, e.
 
 # If you want to install this jekyll in a subpath (eg /digitalgarden) set it here. 
 # Else keep it Empty (DON'T PUT /; Keep it empty)
-baseurl: "/docs"
+baseurl: ""
 # baseurl: ""
 
 # Website Header, Description, Footer year and text. 
