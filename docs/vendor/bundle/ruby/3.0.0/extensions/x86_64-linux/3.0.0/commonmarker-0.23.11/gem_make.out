@@ -1,5 +1,5 @@
 current directory: /home/fergal/Desktop/notes/FergalHennessy.github.io/docs/vendor/bundle/ruby/3.0.0/gems/commonmarker-0.23.11/ext/commonmarker
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20241227-51916-78uhvx.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20241227-55230-2y8op6.rb extconf.rb
 creating Makefile
 
 current directory: /home/fergal/Desktop/notes/FergalHennessy.github.io/docs/vendor/bundle/ruby/3.0.0/gems/commonmarker-0.23.11/ext/commonmarker
@@ -64,4 +64,4 @@ linking shared-object commonmarker/commonmarker.so
 
 current directory: /home/fergal/Desktop/notes/FergalHennessy.github.io/docs/vendor/bundle/ruby/3.0.0/gems/commonmarker-0.23.11/ext/commonmarker
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20241227-51916-e8wpmt/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20241227-55230-16cc04/commonmarker

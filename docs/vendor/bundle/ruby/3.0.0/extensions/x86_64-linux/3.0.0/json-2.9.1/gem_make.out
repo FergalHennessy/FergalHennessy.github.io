@@ -1,5 +1,5 @@
 current directory: /home/fergal/Desktop/notes/FergalHennessy.github.io/docs/vendor/bundle/ruby/3.0.0/gems/json-2.9.1/ext/json/ext/parser
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20241227-51916-uoxyiu.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20241227-55230-dg5dbf.rb extconf.rb
 checking for rb_enc_interned_str() in ruby.h... yes
 checking for rb_hash_new_capa() in ruby.h... no
 checking for rb_hash_bulk_insert() in ruby.h... yes
@@ -18,4 +18,4 @@ linking shared-object json/ext/parser.so
 
 current directory: /home/fergal/Desktop/notes/FergalHennessy.github.io/docs/vendor/bundle/ruby/3.0.0/gems/json-2.9.1/ext/json/ext/parser
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 parser.so ./.gem.20241227-51916-j9x2v4/json/ext
+/usr/bin/install -c -m 0755 parser.so ./.gem.20241227-55230-yyudhv/json/ext
