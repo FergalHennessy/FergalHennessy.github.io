@@ -1,0 +1,185 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta
+        content="Product and Type Designer | UI UX | Design Mentoring"
+        property="og:description">
+      <meta content="https://www.hennessy.page/about/" property="article:author">
+      <meta property="og:image" content="../assets/img/OGImg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"><meta content="Stochastic Processes (2024-1-17)" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="https://www.hennessy.page/note/Stochastic-Processes-(2024-1-17)" property="og:url"><title>Stochastic Processes (2024-1-17) - Fergal Hennessy</title>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      <link rel="canonical" href="https://www.hennessy.page/note/Stochastic-Processes-(2024-1-17)" />
+      <link rel="apple-touch-icon" href="/docs/assets/img/profile.png">
+      <link rel="icon" href="/docs/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/docs/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" /><script>
+        MathJax = {
+          tex: {
+            inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script
+      type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="https://www.hennessy.page/feed.xml">
+    </head>
+    <body>
+      <main><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="padding-left: 0;"; href="/docs/index.html">
+              <h6> Fergal Hennessy</h6>
+            </a>
+            <script src="/docs/assets/js/modeswitcher.js"></script>
+            <script src="/docs/assets/js/Hamburger.js"></script>
+            <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="/docs/assets/img/sun.svg" id="theme-toggle-img--mobile">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/docs/notes" class="navbar-item">
+                Algorithm Notes
+              </a>
+              <a href="../post/how-to" class="navbar-item">
+                How To
+              </a>
+              <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+                Github
+              </a>
+              <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+                Jekyll
+              </a>
+              <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+                Obsidian
+              </a>
+            </div>
+            <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-text">
+                    <span class="icon is-small">
+                      <img src="/docs/assets/img/sun.svg" id="theme-toggle-img">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="columns is-centered">
+            <!-- Homepage Layout--><!--- Notes Feed Layout--><!--- Change Bulma Layout Here-->
+            <!--- Notes Layout-->
+            <div class="column is-7-widescreen  is-8-desktop is-9-tablet is-12-mobile">
+              <div class="note-page-section">
+                <!--This needs to get fixed, like i need to keep the last visited site in session storage maybe?-->
+                <!--There's a duplicate of this for posts instead of notes-->
+                <div><a onclick="window.history.back();">
+                    <h5 class="meta-title">← BACK</h5>
+                  </a>
+                </div>
+                <!--- List type Note Layout-->
+                <div class = "title-and-tags">
+                  <h1>Stochastic Processes (2024-1-17)</h1>
+                  <div class = "tags">
+                  </div>
+                </div>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <p>Instructor: Benson Au <br />
+                    website: <a href="https://www.stat.berkeley.edu/~bensonau/s24.150">stat.berkeley.edu/~bensonau/s24.150</a> <br />
+                    bcourses, Edstem, Gradescope <br />
+                    Optional discussion sections, see poll for times<br />
+                    Hw0 is Gradescope review, HW1 is due Friday 2024-1-26</p>
+                  <h2 id="today">Today</h2>
+                  <p>Probability Space, Random Variable</p>
+                  <p>Probability Space: \((\Omega, TF, P)\) (sample space, algebra of sets, function that assigns likelihoods), where the probability function \(P\) assigns probability on the space and sums to 1.</p>
+                  <p>Random Variable: some \(X \in \Omega\)</p>
+                  <p>We study the <em>distribution</em> of X: \(M_X(A) = P(X\in A)\).</p>
+                  <p>For "nice" sets \(A \subseteq \mathbb{R}\). If X is discrete (countably infinite, by the way), we can work with the probability mass function \(P_X(x) = P(X=x)\) for \(x \in \mathbb{R}\)</p>
+                  <p>if \(X\) is continuous, work with the <em>probability density function</em> of X: \(f_X(x)\), such that \(\int_Af_X(x) dx = P(X\in A)\)</p>
+                  <p>What about in general? CDF: \(F_X(x) = P(X\in x)\)</p>
+                  <h3 id="expectation">Expectation</h3>
+                  <p>If \(X\) is discrete, \(E[g(X)] = \sum_x g(x)p_X(x)\) or \(E[g(x)] = \int g(x) f_X(x) dx\)</p>
+                  <p>In general, if \(X \geq 0, E[X] = \int_0^\infty P(X&gt;x)dx = \int_0^\infty P(X\geq x) dx\)</p>
+                  <h3 id="stochastic-process">Stochastic Process</h3>
+                  <p>What is a stochastic process? \(X: \Omega -&gt; \mathbb{R}\)</p>
+                  <p>\(X: \Omega \times T -&gt; \mathbb{R}\), where Time is a function that can be discrete or continuous. \(\omega, t -&gt; X_t(w)\)</p>
+                  <p>Let's say you have a time series \(x_1, x_2, x_3, x_4...\)</p>
+                  <p>Basic question. What do the trajectories look like?</p>
+                  <p>Distribution \((Y_n)_{n=1}^\infty\) i.i.d mean \(\mu\) and variance 1</p>
+                  \[X_n = \frac{Y_1 + ... + Y_n}{n}, (X_n)_{n=1}\infty\]
+                  <p>by LLN, all the trajectories here approach the mean \(\mu\). The trajectory has a horizontal asymptote at the mean. What about a new trajectory (sequence)?</p>
+                  \[\sqrt{n}(x_n-\mu) \overset{d}{\to} N(0, 1)\]
+                  <p>The difference from the moving average to the mean, when scaled by the square root of the number of proceses, approaches the normal distribution. (assuming that the starting variables have variance 1)</p>
+                  <p>If \(X_1... X_n, \quad T = \{1, n\}\)</p>
+                  <p>understand the joint distribution</p>
+                  \[u_{X_1...X_n}(A_1, ... A_n) = P(X_1\in A_1, X_n \in A_n)\]
+                  <p>in the case of independence, joint probabilities is the same as multiplying the individual probabilities.</p>
+                  <p>Remember: \(P(A \Cap B) = P(A)P(B\) given \(A)\)</p>
+                  <p>Note: $$P_{X given Y}(x given y) = P(X=x given Y = y) = \frac{P_{x, y}(x, y)}{P_Y(y)}</p>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+            </div>
+            <!--Tag category default layout below layout below-->
+            <!--- Post Feed Layout--><!--- Post Layout--><!--- Static Page Layout--></div>
+        </section>
+        <div id="copyright">
+          <p id="copyright-notice"> © 2024 • made with jekyll garden •
+            Credits</a> </p>
+      </div>
+    </main>
+  </body>
+</html>

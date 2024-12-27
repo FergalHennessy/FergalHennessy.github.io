@@ -1,0 +1,239 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta
+        content="Product and Type Designer | UI UX | Design Mentoring"
+        property="og:description">
+      <meta content="https://www.hennessy.page/about/" property="article:author">
+      <meta property="og:image" content="../assets/img/OGImg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"><meta content="Diameter Of Binary Tree" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="https://www.hennessy.page/note/Diameter-Of-Binary-Tree" property="og:url"><title>Diameter Of Binary Tree - Fergal Hennessy</title>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      <link rel="canonical" href="https://www.hennessy.page/note/Diameter-Of-Binary-Tree" />
+      <link rel="apple-touch-icon" href="/docs/assets/img/profile.png">
+      <link rel="icon" href="/docs/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/docs/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" /><script>
+        MathJax = {
+          tex: {
+            inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script
+      type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="https://www.hennessy.page/feed.xml">
+    </head>
+    <body>
+      <main><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="padding-left: 0;"; href="/docs/index.html">
+              <h6> Fergal Hennessy</h6>
+            </a>
+            <script src="/docs/assets/js/modeswitcher.js"></script>
+            <script src="/docs/assets/js/Hamburger.js"></script>
+            <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="/docs/assets/img/sun.svg" id="theme-toggle-img--mobile">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/docs/notes" class="navbar-item">
+                Algorithm Notes
+              </a>
+              <a href="../post/how-to" class="navbar-item">
+                How To
+              </a>
+              <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+                Github
+              </a>
+              <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+                Jekyll
+              </a>
+              <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+                Obsidian
+              </a>
+            </div>
+            <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-text">
+                    <span class="icon is-small">
+                      <img src="/docs/assets/img/sun.svg" id="theme-toggle-img">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="columns is-centered">
+            <!-- Homepage Layout--><!--- Notes Feed Layout--><!--- Change Bulma Layout Here-->
+            <!--- Notes Layout-->
+            <div class="column is-7-widescreen  is-8-desktop is-9-tablet is-12-mobile">
+              <div class="note-page-section">
+                <!--This needs to get fixed, like i need to keep the last visited site in session storage maybe?-->
+                <!--There's a duplicate of this for posts instead of notes-->
+                <div><a onclick="window.history.back();">
+                    <h5 class="meta-title">← BACK</h5>
+                  </a>
+                </div>
+                <!--- List type Note Layout-->
+                <div class = "title-and-tags">
+                  <h1>Diameter Of Binary Tree</h1>
+                  <div class = "tags">
+                    <a href="/docs/tags/easy">
+                      <span class="tag">easy</span>
+                    </a>
+                    <a href="/docs/tags/tree">
+                      <span class="tag">tree</span>
+                    </a>
+                    <a href="/docs/tags/dfs">
+                      <span class="tag">dfs</span>
+                    </a></div>
+                </div>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <h3 id="diameter-of-a-binary-tree">Diameter Of a Binary Tree</h3>
+                  <p>Given the <code class="language-plaintext highlighter-rouge">root</code> of a binary tree, return <em>the length of the <strong>diameter</strong> of the tree.</em></p>
+                  <p>The <strong>diameter</strong> of a binary tree is the <strong>length</strong> of the longes path between any two nodes in a tree. This path may or may not pass through the <code class="language-plaintext highlighter-rouge">root</code>.</p>
+                  <h4 id="examples">Examples:</h4>
+                  <p>Example 1:</p>
+                  <p>Input: <code class="language-plaintext highlighter-rouge">root = [1, 2, 3, 4, 5]</code></p>
+                  <p>Output: <code class="language-plaintext highlighter-rouge">3</code></p>
+                  <p>Example 2:</p>
+                  <p>Input: <code class="language-plaintext highlighter-rouge">root = [1, 2]</code></p>
+                  <p>Output: <code class="language-plaintext highlighter-rouge">1</code></p>
+                  <p>here trees are represented in array in a bfs order where all members of layer n are listed before all members of layer n+1</p>
+                  <h3 id="solution-1-naive-recursive">Solution 1: Naive Recursive</h3>
+                  <p>We implement a recursive solution where the only parameter is the root node. Note that in our main funciton, we need to track the longest diameter of the left child and the longest diameter of the right child.</p>
+                  <p>To help with our solution, we implement two helper functions which are also recursive.</p>
+                  <p>Implementation:</p>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>	class Solution{
+	private:
+		int longestLeftPath(TreeNode* root){
+			if(root == nullptr || root-&gt;left == nullptr){
+				return 0;
+			}
+			return 1 + max(longestLeftPath(root-&gt;left), longestRightPath(root-&gt;right));
+		}
+		int longestRightPath(TreeNode* root){
+			if(root == nullptr || root-&gt;right == nullptr){
+				return 0;
+			}
+			return 1 + max(longestLeftPath(root-&gt;left), longestRightPath(root-&gt;right));
+		}
+	public:
+		int diameterOfBinaryTree(TreeNode* root){
+			if(root == nullptr) return 0;
+			return max(longestLeftPath(root) + longestRightPath(root),
+				max(diameterOfBinaryTree(root-&gt;left), diameterOfBinarytree(root-&gt;right))
+			);
+		}
+	}
+</code></pre>
+                    </div>
+                  </div>
+                  <h5 id="complexity-analysis">Complexity analysis:</h5>
+                  <p>Time Complexity:</p>
+                  <p>The time complexity of <code class="language-plaintext highlighter-rouge">longestLeftPath</code> and <code class="language-plaintext highlighter-rouge">longestRightPath</code> is \(O(n)\) because we do \(o(1)\) work per call and have a max of n calls.</p>
+                  <p>The time complexity of <code class="language-plaintext highlighter-rouge">diameterOfBinaryTree</code> is \(O(n)\) time for the <code class="language-plaintext highlighter-rouge">longestLeftPath</code> and <code class="language-plaintext highlighter-rouge">longestRightPath</code> calls and because of recursion, these calls can happen a maximum of \(n\) times.</p>
+                  <p>So the overall time complexity is \(O(n^2)\) due to our helper functions.</p>
+                  <p>The overall space complexity is \(O(n^2)\) because recursive calls happen a maximum of \(n^2\) times in total.</p>
+                  <h3 id="solution-2-updating-value-while-recursing">Solution 2: Updating value while recursing</h3>
+                  <p>To save runtime, we combine our previous functions into one recursive function. However, we need some form of memory, because it may be the case that the left height + the right height is less than the diameter of either the left subtree or the right subtree alone. Therefore, we will carry our best previous diameter within a pointer <code class="language-plaintext highlighter-rouge">diameter</code> and update it whenever we have a new greatest diameter.</p>
+                  <p>Implementation:</p>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>	class Solution{
+	private:
+		//height measures the distance from the root to a leaf
+		int heightWithDia(TreeNode* root, int&amp; diameter){
+			if(root=nullptr) return 0;
+			int lh = heightWithDia(TreeNode* root-&gt;left,  diameter);
+			int rh = heightWithDia(TreeNode* root-&gt;right, diameter);
+			//crucial to have a max here, because in some cases lh will be 0 or 1 while lh or rh of the children is high.
+			diameter = max(diameter, lh + rh);
+			return max(lh + 1, rh + 1);
+		}
+	public:
+		int diameterOfBinaryTree(TreeNode* root){
+			int dia = 0;
+			heightWithDia(root, dia);
+			return dia;
+		}
+	}
+</code></pre>
+                    </div>
+                  </div>
+                  <h5 id="complexity-analysis-1">Complexity Analysis</h5>
+                  <p>Time Complexity:</p>
+                  <p>The time complexity of <code class="language-plaintext highlighter-rouge">heightWithDia</code> is \(O(n)\). We do \(O(1)\) work a maximum of \(n\) times.</p>
+                  <p>The overall time and space complexity is \(O(n)\) because all we have to do is initialize and return a variable <code class="language-plaintext highlighter-rouge">dia</code>.</p>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+            </div>
+            <!--Tag category default layout below layout below-->
+            <!--- Post Feed Layout--><!--- Post Layout--><!--- Static Page Layout--></div>
+        </section>
+        <div id="copyright">
+          <p id="copyright-notice"> © 2024 • made with jekyll garden •
+            Credits</a> </p>
+      </div>
+    </main>
+  </body>
+</html>

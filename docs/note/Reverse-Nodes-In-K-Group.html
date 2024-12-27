@@ -1,0 +1,275 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta
+        content="Product and Type Designer | UI UX | Design Mentoring"
+        property="og:description">
+      <meta content="https://www.hennessy.page/about/" property="article:author">
+      <meta property="og:image" content="../assets/img/OGImg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"><meta content="Reverse Nodes In K-Group" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="https://www.hennessy.page/note/Reverse-Nodes-In-K-Group" property="og:url"><title>Reverse Nodes In K-Group - Fergal Hennessy</title>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      <link rel="canonical" href="https://www.hennessy.page/note/Reverse-Nodes-In-K-Group" />
+      <link rel="apple-touch-icon" href="/docs/assets/img/profile.png">
+      <link rel="icon" href="/docs/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/docs/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" /><script>
+        MathJax = {
+          tex: {
+            inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script
+      type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="https://www.hennessy.page/feed.xml">
+    </head>
+    <body>
+      <main><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="padding-left: 0;"; href="/docs/index.html">
+              <h6> Fergal Hennessy</h6>
+            </a>
+            <script src="/docs/assets/js/modeswitcher.js"></script>
+            <script src="/docs/assets/js/Hamburger.js"></script>
+            <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="/docs/assets/img/sun.svg" id="theme-toggle-img--mobile">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/docs/notes" class="navbar-item">
+                Algorithm Notes
+              </a>
+              <a href="../post/how-to" class="navbar-item">
+                How To
+              </a>
+              <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+                Github
+              </a>
+              <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+                Jekyll
+              </a>
+              <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+                Obsidian
+              </a>
+            </div>
+            <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-text">
+                    <span class="icon is-small">
+                      <img src="/docs/assets/img/sun.svg" id="theme-toggle-img">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="columns is-centered">
+            <!-- Homepage Layout--><!--- Notes Feed Layout--><!--- Change Bulma Layout Here-->
+            <!--- Notes Layout-->
+            <div class="column is-7-widescreen  is-8-desktop is-9-tablet is-12-mobile">
+              <div class="note-page-section">
+                <!--This needs to get fixed, like i need to keep the last visited site in session storage maybe?-->
+                <!--There's a duplicate of this for posts instead of notes-->
+                <div><a onclick="window.history.back();">
+                    <h5 class="meta-title">← BACK</h5>
+                  </a>
+                </div>
+                <!--- List type Note Layout-->
+                <div class = "title-and-tags">
+                  <h1>Reverse Nodes In K-Group</h1>
+                  <div class = "tags">
+                    <a href="/docs/tags/hard">
+                      <span class="tag">hard</span>
+                    </a>
+                    <a href="/docs/tags/linked-list">
+                      <span class="tag">linked-list</span>
+                    </a>
+                    <a href="/docs/tags/recursion">
+                      <span class="tag">recursion</span>
+                    </a></div>
+                </div>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <h2 id="reverse-nodes-in-k-group">Reverse Nodes In K-Group</h2>
+                  <p>Given the head of a linked list, reverse the nodes of the list <code class="language-plaintext highlighter-rouge">k</code> at a time, without altering the value of any nodes in the list. If the number of nodes is not a multiple of <code class="language-plaintext highlighter-rouge">k</code> then left-out nodes, in the end, should remain as it is.
+                    <em>Return the modified list.</em></p>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>/**
+* Definition for singly-linked list.
+* struct ListNode {
+*     int val;
+*     ListNode *next;
+*     ListNode() : val(0), next(nullptr) {}
+*     ListNode(int x) : val(x), next(nullptr) {}
+*     ListNode(int x, ListNode *next) : val(x), next(next) {}
+* };
+*/
+</code></pre>
+                    </div>
+                  </div>
+                  <h2 id="examples">Examples</h2>
+                  <p>Input: {<code class="language-plaintext highlighter-rouge">head = [1, 2, 3, 4, 5], k = 2</code>} –&gt; <code class="language-plaintext highlighter-rouge">[2, 1, 3, 4, 5]</code> <br />
+                    Input: {<code class="language-plaintext highlighter-rouge">head = [1, 2, 3, 4, 5], k = 3</code>} –&gt; <code class="language-plaintext highlighter-rouge">[3, 2, 1, 4, 5]</code> <br />
+                    Input: {<code class="language-plaintext highlighter-rouge">head = [1, 2], k= 2</code>} –&gt; <code class="language-plaintext highlighter-rouge">[2, 1]</code></p>
+                  <h3 id="solution-1-recursion">Solution 1: Recursion</h3>
+                  <p>To quickly tackle this problem, recursion makes a lot of sense, as the back of the list can be transformed independently of earlier items. To implement a recursion solution takes three steps:</p>
+                  <ol>
+                    <li>
+                      <p>Look Ahead: define a pointer <code class="language-plaintext highlighter-rouge">cursor</code> which looks ahead to see if we have enough space to do a reversal (if we have k or more nodes in the current list)</p>
+                    </li>
+                    <li>
+                      <p>List Reversal: similar to normal linked-list reversal, but limited to k items. Use 3 <code class="language-plaintext highlighter-rouge">ListNode*</code> variables: <code class="language-plaintext highlighter-rouge">curr, nxt, and prev</code>.</p>
+                    </li>
+                    <li>
+                      <p>Recursive Call: set the next item in the list to the result of a new reversal call, and return the head of the current list</p>
+                    </li>
+                  </ol>
+                  <p>Coding this up, we find the following function:</p>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>ListNode* reverseKGroup(ListNode* head, int k){
+	ListNode* cursor = head;
+	for(int i = 0; i&lt;k; ++i){
+		if(cursor == nullptr) return head;
+		cursor = cursor-&gt;next;
+	}
+	ListNode* curr = head;
+	ListNode* prev = nullptr;
+	ListNode* nxt = nullptr;
+	for(int i = 0; i &lt; k; ++i){
+		nxt = curr-&gt;next;
+		curr-&gt;next = prev;
+		prev = curr;
+		curr = nxt;
+	}
+	head-&gt;next = reverseKGroup(curr, k);
+	return prev;
+}
+</code></pre>
+                    </div>
+                  </div>
+                  <p>Runtime Analysis:
+                    The runtime of this function is O(n), as each node is traversed at most twice.
+                    The space complexity of this function is O(n) due to call stacks and its recursive nature.
+                    This function is easy to understand as is, but to reduce the space complexity we can rewrite it to be iterative.</p>
+                  <h3 id="solution-2-iteration">Solution 2: Iteration</h3>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>ListNode* reverseKGroup(ListNode* head, int k) {
+        ListNode* dummy = new ListNode(0);
+        dummy-&gt;next = head;
+        ListNode* before = dummy;
+        ListNode* after = head;
+        ListNode* curr = nullptr;
+        ListNode* prev = nullptr;
+        ListNode* nxt = nullptr;
+        while(true){
+            ListNode* cursor = after;
+            for(int i = 0; i &lt; k; i++){
+                if(cursor == nullptr) return dummy-&gt;next;
+                cursor = cursor-&gt;next;
+            }
+            curr = after;
+            prev = before;
+            for(int i = 0; i &lt; k; i++){
+                nxt = curr-&gt;next;
+                curr-&gt;next = prev;
+                prev = curr;
+                curr = nxt;
+            }
+            after-&gt;next = curr;
+            before-&gt;next = prev;
+            before = after;
+            after = curr;
+        }
+    }
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add backlinks to the current page -->
+                <div class="related show" id="jekyll-seamless-backlinks">
+                  <h5 class="meta-title centre-title">Links to this note</h5>
+                  <div class="related-wrapper">
+                    <div class="related-group"><a href="/docs/note/LeetCode-Problems">
+                        <h6>LeetCode Problems</h6>
+                        <p class="excerpt" style="margin: 0px; color: var(--color-text-main) !important;">LeetCode Problems!
+                          LC 23: Merge K Lists
+                          LC 25: Reverse Nodes In KGroup
+                          LC 32: Longest Valid Pa...</p>
+                      </a></div>
+                    <!--
+        This code is to show other pages (note under collection) as Backlink. 
+        Disabled as I don't see a need for this right now.-->
+                  </div>
+                  <br/>
+                </div>
+              </div>
+            </div>
+            <!--Tag category default layout below layout below-->
+            <!--- Post Feed Layout--><!--- Post Layout--><!--- Static Page Layout--></div>
+        </section>
+        <div id="copyright">
+          <p id="copyright-notice"> © 2024 • made with jekyll garden •
+            Credits</a> </p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -31,6 +31,7 @@ lsi: false
 safe: true
 source: .
 relative_permalinks: false
+destination: "docs/"
 
 # Website Header, Description, Footer year and text. 
 # If you are deleting this, make sure you remove it from HTML files too 
@@ -127,7 +128,6 @@ exclude:
   - _notes/200 Private
   - _notes/300 Templates
   - vendor/
-  - docs/vendor/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

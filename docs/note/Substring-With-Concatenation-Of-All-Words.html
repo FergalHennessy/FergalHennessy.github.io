@@ -1,0 +1,275 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta
+        content="Product and Type Designer | UI UX | Design Mentoring"
+        property="og:description">
+      <meta content="https://www.hennessy.page/about/" property="article:author">
+      <meta property="og:image" content="../assets/img/OGImg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"><meta content="Substring With Concatenation Of All Words" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="https://www.hennessy.page/note/Substring-With-Concatenation-Of-All-Words" property="og:url"><title>Substring With Concatenation Of All Words - Fergal Hennessy</title>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      <link rel="canonical" href="https://www.hennessy.page/note/Substring-With-Concatenation-Of-All-Words" />
+      <link rel="apple-touch-icon" href="/docs/assets/img/profile.png">
+      <link rel="icon" href="/docs/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/docs/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" /><script>
+        MathJax = {
+          tex: {
+            inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script
+      type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="https://www.hennessy.page/feed.xml">
+    </head>
+    <body>
+      <main><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="padding-left: 0;"; href="/docs/index.html">
+              <h6> Fergal Hennessy</h6>
+            </a>
+            <script src="/docs/assets/js/modeswitcher.js"></script>
+            <script src="/docs/assets/js/Hamburger.js"></script>
+            <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="/docs/assets/img/sun.svg" id="theme-toggle-img--mobile">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/docs/notes" class="navbar-item">
+                Algorithm Notes
+              </a>
+              <a href="../post/how-to" class="navbar-item">
+                How To
+              </a>
+              <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+                Github
+              </a>
+              <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+                Jekyll
+              </a>
+              <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+                Obsidian
+              </a>
+            </div>
+            <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-text">
+                    <span class="icon is-small">
+                      <img src="/docs/assets/img/sun.svg" id="theme-toggle-img">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="columns is-centered">
+            <!-- Homepage Layout--><!--- Notes Feed Layout--><!--- Change Bulma Layout Here-->
+            <!--- Notes Layout-->
+            <div class="column is-7-widescreen  is-8-desktop is-9-tablet is-12-mobile">
+              <div class="note-page-section">
+                <!--This needs to get fixed, like i need to keep the last visited site in session storage maybe?-->
+                <!--There's a duplicate of this for posts instead of notes-->
+                <div><a onclick="window.history.back();">
+                    <h5 class="meta-title">← BACK</h5>
+                  </a>
+                </div>
+                <!--- List type Note Layout-->
+                <div class = "title-and-tags">
+                  <h1>Substring With Concatenation Of All Words</h1>
+                  <div class = "tags">
+                    <a href="/docs/tags/hard">
+                      <span class="tag">hard</span>
+                    </a>
+                    <a href="/docs/tags/hashmap">
+                      <span class="tag">hashmap</span>
+                    </a>
+                    <a href="/docs/tags/sliding-window">
+                      <span class="tag">sliding-window</span>
+                    </a></div>
+                </div>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <h2 id="substring-with-concatenation-of-all-words">Substring With Concatenation Of All Words</h2>
+                  <p>You are given a string <code class="language-plaintext highlighter-rouge">s</code>, and an array of strings <code class="language-plaintext highlighter-rouge">words</code>. All the strings of words are <strong>of the same length</strong></p>
+                  <p>A <strong>concatenated substring</strong> in <code class="language-plaintext highlighter-rouge">s</code> is a substring that contains all the strings of any permutation of <code class="language-plaintext highlighter-rouge">words</code> concatenated. Essentially, if all the words in <code class="language-plaintext highlighter-rouge">words</code> appear exactly once consecutively, then the substring is a concatenated substring.</p>
+                  <p><em>Return the starting indices of the concatenated substrings in</em> <code class="language-plaintext highlighter-rouge">s</code>. You can return the answer in <strong>any order.</strong></p>
+                  <h2 id="examples">Examples</h2>
+                  <p><strong>Input:</strong><code class="language-plaintext highlighter-rouge">s = "barfoothefoobarman", words = ["foo, bar"]</code> –&gt; <code class="language-plaintext highlighter-rouge">[0, 9]</code> <br />
+                    <strong>Input:</strong> <code class="language-plaintext highlighter-rouge">s = "wordgoodgoodgoodbestword", words = ["word", "good", "best", "word"]</code> –&gt; <code class="language-plaintext highlighter-rouge">[]</code></p>
+                  <h3 id="solution-1-brute-force-hashmap-comparison">Solution 1: Brute Force Hashmap Comparison</h3>
+                  <p>Let the size of <code class="language-plaintext highlighter-rouge">s</code> be <code class="language-plaintext highlighter-rouge">n</code>, let the number of elements in <code class="language-plaintext highlighter-rouge">words</code> be <code class="language-plaintext highlighter-rouge">m</code>, let the length of a word in <code class="language-plaintext highlighter-rouge">words</code> be <code class="language-plaintext highlighter-rouge">w</code>. It follows that every concatenated substring will have length <code class="language-plaintext highlighter-rouge">m * w</code>. We can brute force a solution as follows:</p>
+                  <ol>
+                    <li>load all <code class="language-plaintext highlighter-rouge">words</code> into a hashmap <code class="language-plaintext highlighter-rouge">total</code></li>
+                    <li>For each length <code class="language-plaintext highlighter-rouge">m * w</code> substring of <code class="language-plaintext highlighter-rouge">s</code>, split into length <code class="language-plaintext highlighter-rouge">w</code> pieces, add the pieces to a new hashmap <code class="language-plaintext highlighter-rouge">prospect</code> and check <code class="language-plaintext highlighter-rouge">prospect == total</code></li>
+                    <li>Return a vector of all the indices where step 2 is true.
+                      Putting these steps into code, we get this solution:</li>
+                  </ol>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>class Solution{
+public:
+	vector&lt;int&gt; findSubstring(string s, vector&lt;string&gt;&amp; words){
+		vector&lt;int&gt; res;
+		if(words.size() == 0) return res;
+		unordered_map&lt;string, int&gt; total;
+		for(string&amp; word: words){
+			total[word]++;
+		}
+		int m = words.size();
+		int w = words[0].size();
+		for(int i = 0; i &lt; s.size() - (m*w) + 1; ++i){
+			unordered_map&lt;string, int&gt; prospect;
+			int j = i;
+			while(j &lt; i + (m*w)){
+				string word = s.substr(j, w);
+				prospect[word] += 1;
+				j+= w;
+			}
+			if(prospect == total) res.push_back(i);
+		}
+		return res;
+	}
+};
+</code></pre>
+                    </div>
+                  </div>
+                  <h5 id="runtime-analysis">Runtime Analysis:</h5>
+                  <ol>
+                    <li>Building <code class="language-plaintext highlighter-rouge">total</code>: <code class="language-plaintext highlighter-rouge">O(1) * m = O(m)</code></li>
+                    <li>Building <code class="language-plaintext highlighter-rouge">prospect</code> and comparing with <code class="language-plaintext highlighter-rouge">total</code>: <code class="language-plaintext highlighter-rouge">O(m*w)</code>  (There are <code class="language-plaintext highlighter-rouge">(m*w)</code> characters in both maps)</li>
+                    <li>Iterating through <code class="language-plaintext highlighter-rouge">s</code>: <code class="language-plaintext highlighter-rouge">O(n)</code>
+                      Total Runtime: <code class="language-plaintext highlighter-rouge">O(m) + O(n * m * w) = O(n * m* w)</code></li>
+                  </ol>
+                  <h5 id="space-analysis">Space Analysis:</h5>
+                  <ol>
+                    <li><code class="language-plaintext highlighter-rouge">total</code>: <code class="language-plaintext highlighter-rouge">O(m*w)</code></li>
+                    <li><code class="language-plaintext highlighter-rouge">prospect</code>: <code class="language-plaintext highlighter-rouge">O(m*w)</code> (<code class="language-plaintext highlighter-rouge">n</code> times)
+                      Space complexity is also <code class="language-plaintext highlighter-rouge">O(m*n*w)</code></li>
+                  </ol>
+                  <p>Both space and time are cubic: can we do better? Looking at this solution, we do a lot of duplicate comparisons. if we create a map <code class="language-plaintext highlighter-rouge">prospect</code> and check all the internals against <code class="language-plaintext highlighter-rouge">total</code>, then discard it, we waste a lot of comparisons that we could have saved for future iterations…</p>
+                  <h3 id="solution-2-sliding-window-hashmap-comparison">Solution 2: Sliding Window Hashmap Comparison</h3>
+                  <p>We can use a sliding window approach to avoid duplicate comparisons. As before, let the size of <code class="language-plaintext highlighter-rouge">s</code> be <code class="language-plaintext highlighter-rouge">n</code>, let the number of elements in <code class="language-plaintext highlighter-rouge">words</code> be <code class="language-plaintext highlighter-rouge">m</code>, let the length of a word in <code class="language-plaintext highlighter-rouge">words</code> be <code class="language-plaintext highlighter-rouge">w</code>.   Because hashmaps can only be recycled when the next hashmap begins a multiple of <code class="language-plaintext highlighter-rouge">w</code> away, we will need an outer loop of size n. Our solution has three steps:</p>
+                  <ol>
+                    <li>Create a hashmap (<code class="language-plaintext highlighter-rouge">total</code>) of all strings in words, with higher values corresponding to more occurrences</li>
+                    <li>Loop through all possible remainders (mod <code class="language-plaintext highlighter-rouge">w</code>). In each iteration:
+                      <ol>
+                        <li>create a new hashmap <code class="language-plaintext highlighter-rouge">prospect</code>, and a new string <code class="language-plaintext highlighter-rouge">t</code></li>
+                        <li>Create a loop of length <code class="language-plaintext highlighter-rouge">n</code> to loop through the characters in <code class="language-plaintext highlighter-rouge">s</code>. In each iteration:
+                          <ol>
+                            <li>increment <code class="language-plaintext highlighter-rouge">t</code> until it is length <code class="language-plaintext highlighter-rouge">w</code>, then add <code class="language-plaintext highlighter-rouge">t</code> to <code class="language-plaintext highlighter-rouge">prospect</code></li>
+                            <li>when your window size has reached the size of a concatenated string, check whether <code class="language-plaintext highlighter-rouge">prospect</code> == <code class="language-plaintext highlighter-rouge">total</code>. If it does, save the start of the window.</li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>return the list of valid starting indices</li>
+                  </ol>
+                  <p>Coding this up:</p>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>class Solution{
+public:
+	vector&lt;int&gt; findSubstring(string s, vector&lt;string&gt;&amp; words){
+		int n = s.size();
+		int m = words.size(), w = words[0].size();
+		unordered_map&lt;string, int&gt; total;
+		
+		for(string&amp; word : words){
+			total[word]++;
+		}
+		
+		vector&lt;int&gt; res;
+		for(int i = 0; i &lt; w; i++){
+			unordered_map&lt;string, int&gt; prospect;
+			string t = "";
+			for(int j = i, k = i; k &lt; n; k++){
+				t += s[k];
+				if(t.size() == w){
+					prospect[t]++;
+					t = "";
+				}
+				if(k-j+1 == m*w){
+					if(prospect == total)res.push_back(j);
+					string remove = s.substr(j, w);
+					if(prospect[remove] &gt; 1) prospect[remove]--;
+					else prospect.erase(remove);
+					j+=w;
+				}
+			}
+		}
+		return res;
+	}
+};
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+            </div>
+            <!--Tag category default layout below layout below-->
+            <!--- Post Feed Layout--><!--- Post Layout--><!--- Static Page Layout--></div>
+        </section>
+        <div id="copyright">
+          <p id="copyright-notice"> © 2024 • made with jekyll garden •
+            Credits</a> </p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta
+        content="Product and Type Designer | UI UX | Design Mentoring"
+        property="og:description">
+      <meta content="https://www.hennessy.page/about/" property="article:author">
+      <meta property="og:image" content="../assets/img/OGImg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"><meta content="Grouping Increases" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="https://www.hennessy.page/note/Grouping-Increases-(Partitioning)" property="og:url"><title>Grouping Increases - Fergal Hennessy</title>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      <link rel="canonical" href="https://www.hennessy.page/note/Grouping-Increases-(Partitioning)" />
+      <link rel="apple-touch-icon" href="/docs/assets/img/profile.png">
+      <link rel="icon" href="/docs/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/docs/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" /><script>
+        MathJax = {
+          tex: {
+            inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script
+      type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="https://www.hennessy.page/feed.xml">
+    </head>
+    <body>
+      <main><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="padding-left: 0;"; href="/docs/index.html">
+              <h6> Fergal Hennessy</h6>
+            </a>
+            <script src="/docs/assets/js/modeswitcher.js"></script>
+            <script src="/docs/assets/js/Hamburger.js"></script>
+            <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="/docs/assets/img/sun.svg" id="theme-toggle-img--mobile">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/docs/notes" class="navbar-item">
+                Algorithm Notes
+              </a>
+              <a href="../post/how-to" class="navbar-item">
+                How To
+              </a>
+              <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+                Github
+              </a>
+              <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+                Jekyll
+              </a>
+              <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+                Obsidian
+              </a>
+            </div>
+            <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-text">
+                    <span class="icon is-small">
+                      <img src="/docs/assets/img/sun.svg" id="theme-toggle-img">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="columns is-centered">
+            <!-- Homepage Layout--><!--- Notes Feed Layout--><!--- Change Bulma Layout Here-->
+            <!--- Notes Layout-->
+            <div class="column is-7-widescreen  is-8-desktop is-9-tablet is-12-mobile">
+              <div class="note-page-section">
+                <!--This needs to get fixed, like i need to keep the last visited site in session storage maybe?-->
+                <!--There's a duplicate of this for posts instead of notes-->
+                <div><a onclick="window.history.back();">
+                    <h5 class="meta-title">← BACK</h5>
+                  </a>
+                </div>
+                <!--- List type Note Layout-->
+                <div class = "title-and-tags">
+                  <h1>Grouping Increases</h1>
+                  <div class = "tags">
+                    <a href="/docs/tags/hard">
+                      <span class="tag">hard</span>
+                    </a>
+                    <a href="/docs/tags/greedy">
+                      <span class="tag">greedy</span>
+                    </a>
+                    <a href="/docs/tags/dp">
+                      <span class="tag">dp</span>
+                    </a>
+                    <a href="/docs/tags/codeforces-1400">
+                      <span class="tag">codeforces-1400</span>
+                    </a></div>
+                </div>
+                <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+                <div class="content">
+                  <p>You are given an array <code class="language-plaintext highlighter-rouge">a</code> of size <code class="language-plaintext highlighter-rouge">n</code>. You will do the following process to calculate your penalty:</p>
+                  <ol>
+                    <li>Split array \(a\) into two (possibly empty) subsequences \(s\) and \(t\) such that every element of \(a\) is either in \(s\) or \(t\).</li>
+                    <li>For an array \(b\) of size \(m\), define the penalty \(p(b)\) of an array \(b\) as the number of indices \(i\)between 1 and \(m-1\) where \(b_i &lt; b_{i+1}\)</li>
+                    <li>The total penalty you will receive is \(p(s) + p(t)\).</li>
+                  </ol>
+                  <p>If you perform the above process optimally, find the minimum possible penalty you will reveive.</p>
+                  <p>a sequence a is a <em>subsequence</em> of a sequence b if a can be obtained from \(b\) by the deletion of several (possibly, zero or all) elements.</p>
+                  <h3 id="example">Example</h3>
+                  <p>Some valid ways to split array <code class="language-plaintext highlighter-rouge">a = [3, 1, 4, 1, 5]</code> into <code class="language-plaintext highlighter-rouge">(s, t)</code> <br />
+                    <code class="language-plaintext highlighter-rouge">([3, 4, 1, 5], [1])</code>, <br />
+                    <code class="language-plaintext highlighter-rouge">([1, 1],[3, 4, 5])</code>, <br />
+                    <code class="language-plaintext highlighter-rouge">([],[3, 1, 4, 1, 5])</code> <br />
+                    while some invalid ways to split <code class="language-plaintext highlighter-rouge">a</code> are <br />
+                    <code class="language-plaintext highlighter-rouge">([3, 4, 5], [1])</code>,<br />
+                    <code class="language-plaintext highlighter-rouge">([3, 1, 4, 1], [1, 5])</code>,<br />
+                    <code class="language-plaintext highlighter-rouge">([1, 3, 4], [5, 1])</code></p>
+                  <h3 id="input">Input</h3>
+                  <p>Each input contains multiple test cases. the first line contains a single integer \(t: (1 \leq t \leq 10^4)\) – the number of test cases. The description of the test cases follows.</p>
+                  <p>The first line of each test case contains a single integer \(n: (1\leq n \leq 2\cdot 10^5)\) – the size of the array \(a\).</p>
+                  <p>The second line contains \(n\) integers \(a_1, a_2, ..., a_n\) : the elements of the array \(n\).</p>
+                  <p>It is guaranteed that the sum of \(n\) over all test cases does not exceed \(10^5\).</p>
+                  <h3 id="output">Output</h3>
+                  <p>For each test case, output a single integer representing the minimum possible penalty you will receive.</p>
+                  <h2 id="solution-1">Solution 1:</h2>
+                  <p>Any increasing subsequences in these subsequences will result in a penalty. Note that for both arrays, we care only about the back element at any given time, as it is the only element that could actually impact the score. Let the two back elements be \(x\) and \(y\), and without loss of generality let \(x &gt; y\). In the case where the arrays are empty, let the back element \(= \infty\). Let the current element from input be \(a\)</p>
+                  <p>Because there are many binary choices, where one option is totally outclassed by another, we are inspired to use a greedy algorithm. Accordingly, we break the problem into three cases.</p>
+                  <p>Case 1: \(x \geq y \geq a\): In this case,  we may insert \(a\) on top of \(x\) or \(y\), without incurring any penalty. Inserting on \(x\) will leave two elements \((a, y)\), inserting on \(y\) will leave two elements \((x, a)\). Given these two choices, it is always better to insert over \(y\), as \((x, a)\) always gives us more freedom to insert more elements without penalty.</p>
+                  <p>Case 2: \(a \geq x \geq y\): In this case, we may insert \(a\) on top of \(x\) or \(y\), incurring a penalty of 1 no matter what we do. Inserting on \(x\) will leave two elements \((a, y)\), inserting on \(y\) will leave two elements \((x, a)\). Given these two choices, it is always better to insert over \(y\), as \((x, a)\) always gives us more freedom to insert more elements without penalty.</p>
+                  <p>Case 3: \(x &gt; a &gt; y\): In this case, we may insert \(a\) on top of \(x\) or \(y\).<br />
+                    We have the option of \((x, a)\) with penalty 1, or \((a, y)\) with penalty 0. Call the next item that is inserted into this pair that is not inserted over \(a\) to be \(b\). There are three subcases here:</p>
+                  <p>(1) If the next item not inserted over a in this pair is \(b &gt; x\), choice 1 will have cost you    two penalty, choice 2 will have cost you 1 penalty, and the state of the arrays is now the same.</p>
+                  <p>(2) If the next item not inserted over a in this pair is \(x &gt; b &gt; y\), choice 1 will have cost you one penalty, choice 2 will have cost you one penalty, and the state of the arrays is now the same.</p>
+                  <p>(3) If the next item not inserted over a in this pair is \(y &gt; b\), choice 1 will have cost you one penalty, choice 2 will have cost you 0 penalty, and the state of the arrays is now the same.</p>
+                  <p>In all cases, it is at least as good to insert \(a\) over the larger element \(x\) for no penalty. This gives us a pretty simple set of decisions to make in any situation. Let's code up this solution:</p>
+                  <div class="language-plaintext highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>#include "bits/stdc++.h"
+using namespace std;
+
+int t;
+int main(){
+	cin &gt;&gt; t;
+	while(t--){
+		int n;
+		cin &gt;&gt; n;
+		int bigger = INT_MAX;
+		int smaller = INT_MAX;
+		int current;
+		int pen = 0;
+		while(n--){
+			cin&gt;&gt;current;	
+			if(current &lt;= smaller){
+				smaller = current;
+			}else if(current &gt; bigger){
+				smaller = current;
+				pen++;
+			}else{
+				bigger = current;
+			}
+			if(bigger &lt; smaller){
+				std::swap(bigger, smaller);
+			}
+		}
+		cout &lt;&lt; pen &lt;&lt; "\n";
+	}
+	return 0;
+}
+</code></pre>
+                    </div>
+                  </div>
+                  <h5 id="runtime-analysis">Runtime Analysis:</h5>
+                  <p>This function iterates through the list one time, doing a constant number of calculations, the runtime is \(O(n)\).</p>
+                </div>
+                <!-- Add backlinks to the current page --></div>
+            </div>
+            <!--Tag category default layout below layout below-->
+            <!--- Post Feed Layout--><!--- Post Layout--><!--- Static Page Layout--></div>
+        </section>
+        <div id="copyright">
+          <p id="copyright-notice"> © 2024 • made with jekyll garden •
+            Credits</a> </p>
+      </div>
+    </main>
+  </body>
+</html>

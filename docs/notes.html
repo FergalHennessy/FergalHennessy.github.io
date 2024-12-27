@@ -1,0 +1,281 @@
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S, Hiran Venugopalan, Asim K T
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta
+        content="Product and Type Designer | UI UX | Design Mentoring"
+        property="og:description">
+      <meta content="https://www.hennessy.page/about/" property="article:author">
+      <meta property="og:image" content="../assets/img/OGImg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+        rel="stylesheet"><meta content="Algorithm Notes" property="og:title">
+      <meta content="article" property="og:type">
+      <meta content="https://www.hennessy.page/notes" property="og:url"><title>Algorithm Notes - Fergal Hennessy</title>
+      <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+      <link rel="canonical" href="https://www.hennessy.page/notes" />
+      <link rel="apple-touch-icon" href="/docs/assets/img/profile.png">
+      <link rel="icon" href="/docs/assets/img/favicon.png" type="image/png" sizes="16x16" />
+      <link href="/docs/assets/css/style.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/main.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/custom.css" rel="stylesheet" media="all" class="default" />
+      <link href="/docs/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default" /><script>
+        MathJax = {
+          tex: {
+            inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+      </script>
+      <script
+      type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><!--[if IE]>
+        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
+      <![endif]-->
+      <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
+      <link rel="alternate" type="application/rss+xml" href="https://www.hennessy.page/feed.xml">
+    </head>
+    <body>
+      <main><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="padding-left: 0;"; href="/docs/index.html">
+              <h6> Fergal Hennessy</h6>
+            </a>
+            <script src="/docs/assets/js/modeswitcher.js"></script>
+            <script src="/docs/assets/js/Hamburger.js"></script>
+            <div class="navbar-item navbar-dark-mode__mobile is-hidden-tablet" onclick="modeSwitcher()">
+              <div class="buttons">
+                <a class="button is-text">
+                  <span class="icon is-small">
+                    <img src="/docs/assets/img/sun.svg" id="theme-toggle-img--mobile">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a href="/docs/notes" class="navbar-item">
+                Algorithm Notes
+              </a>
+              <a href="../post/how-to" class="navbar-item">
+                How To
+              </a>
+              <a href="https://github.com/Jekyll-Garden/jekyll-garden.github.io" target="_blank" class="navbar-item">
+                Github
+              </a>
+              <a href="https://jekyllrb.com/" target="_blank" class="navbar-item">
+                Jekyll
+              </a>
+              <a href="https://obsidian.md/"  target="_blank" class="navbar-item">
+                Obsidian
+              </a>
+            </div>
+            <div class="navbar-end is-hidden-mobile" onclick="modeSwitcher()" >
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-text">
+                    <span class="icon is-small">
+                      <img src="/docs/assets/img/sun.svg" id="theme-toggle-img">
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="columns is-centered">
+            <!-- Homepage Layout--><!--- Notes Feed Layout-->
+            <div class="column is-6-widescreen is-8-desktop is-8-tablet is-12-mobile">
+              <h5 class="meta-title"><a href="/">← Home</a></h5>
+              <div class="jumbo">Algorithm Notes</div>
+              <!-- Parse internal links, external links, transclusions etc and manipuate the content to reflect it accordingly -->
+              <div class="content">
+                <p>The feed page shows all notes from <code class="language-plaintext highlighter-rouge">notes</code> folder. If you want to hide any notes from this feed, add <code class="language-plaintext highlighter-rouge">feed:hide</code> on note's Frontmatter. Eg:<span class="tooltip"><a class="stale-link" href="javascript:void(0)">Hidden Note</a> <span class="right bottom"> <span class="tooltip-title">Private or Broken Links</span><br/>
+                      <span class="tooltip-excerpt">The page you're looking for is either not available or private! <br/>
+                      </span> </span></span></p>
+              </div>
+              <!--Notes Feed-->
+              <!--Static Page : pages/notes.md--><!-- search bar -->
+              <div class="block">
+                <input class="input is-medium" type="text" placeholder="Search notes.." id="search-input" autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+              </div>
+              <script type="text/javascript" src="/docs/assets/js/vendor/lunr.min.js"></script>
+              <script src="/docs/assets/js/Search.js"></script><!-- feed with filter-->
+              <div class="related-wrapper">
+                <div class="notelist-feed">
+                  <a href="/docs/note/Diameter-Of-Binary-Tree">
+                    <h6>Diameter Of Binary Tree</h6>
+                    <p class="excerpt">
+                      Diameter Of a Binary Tree
+                      Given the root of a binary tree, return the length of the diameter of the tree.
+                      The diameter of a binary tree is the length of the longes path between any two nodes in a...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Permutations">
+                    <h6>Permutations</h6>
+                    <p class="excerpt">
+                      Permutations
+                      Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+                      Example:
+                      \( [1, 2, 3] \to 1, 2, 3], [1, 3, 2], [2, 1, 3], [2,...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Remove-Duplicates-From-Sorted-Array">
+                    <h6>Remove Duplicates From Sorted Array</h6>
+                    <p class="excerpt">
+                      Given an integer array nums, sorted in nondecreasing order, remove some duplicates inplace such that each unique element appears at most twice. The relative order of the elements should be kept the...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Karen-and-Coffee">
+                    <h6>Karen and Coffee</h6>
+                    <p class="excerpt">
+                      You know n coffee recipes, and the ith recipe suggests that coffee should be brewed between $l_i$ and $r_i$ degrees, inclusive, to achieve the optimal taste. Karen thinks that a temperature is admi...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/01-Tree">
+                    <h6>01 Tree</h6>
+                    <p class="excerpt">
+                      There is an edgeweighted complete binary tree with n leaves. A complete binary tree is defined as a tree where every nonleaf vertex has exactly 2 children. For each nonleaf vertex, we label one of ...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Grouping-Increases-(Partitioning)">
+                    <h6>Grouping Increases</h6>
+                    <p class="excerpt">
+                      You are given an array a of size n. You will do the following process to calculate your penalty:
+                      Split array \(a\) into two (possibly empty) subsequences \(s\) and \(t\) such that every element ...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Gas-Station">
+                    <h6>Gas Station</h6>
+                    <p class="excerpt">
+                      There are n gas stations along a circular route, where the amount of gas at the i&#39;th station is gas[i].
+                      You have a car with an unlimited gas tank, and it costs cost[i] to travel from the ith s...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Candy-(Peaks-and-Valleys)">
+                    <h6>Candy (Peaks and Valleys)</h6>
+                    <p class="excerpt">
+                      Candy
+                      There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.
+                      You are giving candies to these children subjected to the following requir...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Substring-With-Concatenation-Of-All-Words">
+                    <h6>Substring With Concatenation Of All Words</h6>
+                    <p class="excerpt">
+                      Substring With Concatenation Of All Words
+                      You are given a string s, and an array of strings words. All the strings of words are of the same length
+                      A concatenated substring in s is a substring tha...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Reverse-Nodes-In-K-Group">
+                    <h6>Reverse Nodes In K-Group</h6>
+                    <p class="excerpt">
+                      Reverse Nodes In KGroup
+                      Given the head of a linked list, reverse the nodes of the list k at a time, without altering the value of any nodes in the list. If the number of nodes is not a multiple of ...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/LeetCode-Problems">
+                    <h6>LeetCode Problems</h6>
+                    <p class="excerpt">
+                      LeetCode Problems!
+                      LC 23: Merge K Lists
+                      LC 25: Reverse Nodes In KGroup
+                      LC 32: Longest Valid Parentheses
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Longest-Valid-Parentheses">
+                    <h6>Longest Valid Parentheses</h6>
+                    <p class="excerpt">
+                      Longest Valid Parentheses
+                      You are given a string s containing just the characters &#39;(&#39; and &#39;)&#39;.
+                      return the length of the longest valid (wellformed) parentheses substring
+                      Examples
+                      In...
+                    </p>
+                  </a>
+                </div>
+                <div class="notelist-feed">
+                  <a href="/docs/note/Merge-K-Lists">
+                    <h6>Merge K Lists</h6>
+                    <p class="excerpt">
+                      Merge K Lists
+                      You are given an array of k linkedlists lists, where each linked list is sorted in ascending order.
+                      merge all the linkedlists into one sorted linkedlist and return it
+                      /**
+                      * Definitio...
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!--Dynamic List Feed-->
+              <!--Static Page : pages/lists.md--><!--- Change Bulma Layout Here-->
+              <!--- Notes Layout--><!--Tag category default layout below layout below-->
+              <!--- Post Feed Layout--><!--- Post Layout--><!--- Static Page Layout--></div>
+          </section>
+          <div id="copyright">
+            <p id="copyright-notice"> © 2024 • made with jekyll garden •
+              Credits</a> </p>
+        </div>
+      </main>
+    </body>
+  </html>
