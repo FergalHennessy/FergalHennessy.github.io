@@ -2,7 +2,11 @@
 title: Diameter Of Binary Tree
 feed: show
 date: 11-09-2024
-tags: easy tree dfs
+tags:
+  - easy
+  - tree
+  - dfs
+  - long-test-tag
 leetcode: medium
 ---
 
@@ -37,28 +41,28 @@ To help with our solution, we implement two helper functions which are also recu
 
 Implementation:
 ```
-	class Solution{
-	private:
-		int longestLeftPath(TreeNode* root){
-			if(root == nullptr || root->left == nullptr){
-				return 0;
-			}
-			return 1 + max(longestLeftPath(root->left), longestRightPath(root->right));
+class Solution{
+private:
+	int longestLeftPath(TreeNode* root){
+		if(root == nullptr || root->left == nullptr){
+			return 0;
 		}
-		int longestRightPath(TreeNode* root){
-			if(root == nullptr || root->right == nullptr){
-				return 0;
-			}
-			return 1 + max(longestLeftPath(root->left), longestRightPath(root->right));
-		}
-	public:
-		int diameterOfBinaryTree(TreeNode* root){
-			if(root == nullptr) return 0;
-			return max(longestLeftPath(root) + longestRightPath(root),
-				max(diameterOfBinaryTree(root->left), diameterOfBinarytree(root->right))
-			);
-		}
+		return 1 + max(longestLeftPath(root->left), longestRightPath(root->right));
 	}
+	int longestRightPath(TreeNode* root){
+		if(root == nullptr || root->right == nullptr){
+			return 0;
+		}
+		return 1 + max(longestLeftPath(root->left), longestRightPath(root->right));
+	}
+public:
+	int diameterOfBinaryTree(TreeNode* root){
+		if(root == nullptr) return 0;
+		return max(longestLeftPath(root) + longestRightPath(root),
+			max(diameterOfBinaryTree(root->left), diameterOfBinarytree(root->right))
+		);
+	}
+}
 ```
 
 ##### Complexity analysis:
@@ -80,24 +84,24 @@ To save runtime, we combine our previous functions into one recursive function. 
 Implementation:
 
 ```
-	class Solution{
-	private:
-		//height measures the distance from the root to a leaf
-		int heightWithDia(TreeNode* root, int& diameter){
-			if(root=nullptr) return 0;
-			int lh = heightWithDia(TreeNode* root->left,  diameter);
-			int rh = heightWithDia(TreeNode* root->right, diameter);
-			//crucial to have a max here, because in some cases lh will be 0 or 1 while lh or rh of the children is high.
-			diameter = max(diameter, lh + rh);
-			return max(lh + 1, rh + 1);
-		}
-	public:
-		int diameterOfBinaryTree(TreeNode* root){
-			int dia = 0;
-			heightWithDia(root, dia);
-			return dia;
-		}
+class Solution{
+private:
+	//height measures the distance from the root to a leaf
+	int heightWithDia(TreeNode* root, int& diameter){
+		if(root=nullptr) return 0;
+		int lh = heightWithDia(TreeNode* root->left,  diameter);
+		int rh = heightWithDia(TreeNode* root->right, diameter);
+		//crucial to have a max here, because in some cases lh will be 0 or 1 while lh or rh of the children is high.
+		diameter = max(diameter, lh + rh);
+		return max(lh + 1, rh + 1);
 	}
+public:
+	int diameterOfBinaryTree(TreeNode* root){
+		int dia = 0;
+		heightWithDia(root, dia);
+		return dia;
+	}
+}
 ```
 
 ##### Complexity Analysis

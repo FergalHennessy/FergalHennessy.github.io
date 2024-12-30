@@ -27,10 +27,12 @@ url: "https://www.hennessy.page" # the base hostname & protocol for your site, e
 baseurl: ""
 
 ## added after looking at github ruby docs https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
-lsi: false
-safe: true
-source: .
-relative_permalinks: false
+# lsi: false
+# safe: true
+# source: .
+# relative_permalinks: false
+plugins_dir: _plugins
+
 
 # Website Header, Description, Footer year and text. 
 # If you are deleting this, make sure you remove it from HTML files too 
@@ -121,7 +123,6 @@ defaults:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
 exclude:
   - _notes/000 Inbox
   - _notes/200 Private
