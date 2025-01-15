@@ -12,7 +12,7 @@ Here Are Some Previous Projects I've Worked On:
 
 [Blending Images](https://fergal-cs180.github.io/src/project2.html)
 
-[Morphing Faces](https://fergal-cs180.github.io/src/project3.html)
+[Morphing Faces](https://fergal-cs180.github.io/src/project2.html)
 
 [Image Generation with Diffusion](https://fergal-cs180.github.io/src/project5.html)
 
