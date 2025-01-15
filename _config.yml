@@ -26,11 +26,6 @@ url: "https://www.hennessy.page" # the base hostname & protocol for your site, e
 # baseurl: "/docs"
 baseurl: ""
 
-## added after looking at github ruby docs https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
-# lsi: false
-# safe: true
-# source: .
-# relative_permalinks: false
 plugins_dir: _plugins
 
 
@@ -81,6 +76,9 @@ collections:
     tags:
       output: true
       permalink: /tags/:title
+    projects:
+      output: true
+      permalink: /:title
 
 markdown: kramdown
 future: true 
@@ -90,6 +88,7 @@ kramdown:
   math_engine: mathjax
   smart_quotes: ["apos", "apos", "quot", "quot"]
   syntax_highlighter: rouge
+  parse_block_html: true
   
 sass:
   style: compressed
@@ -112,8 +111,14 @@ defaults:
       path: ""
       type: tags
     values:
-      layout: tags
+      layout: Post
       content-type: tags
+  - scope: 
+      path: ""
+      type: projects
+    values:
+      layout: Post
+      content-type: projects
 
 
 # Exclude from processing.

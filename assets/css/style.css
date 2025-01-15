@@ -570,7 +570,7 @@ hr {
 .anchor-link {
     stroke: var(--color-text-link) !important;
 }
-
+/*
 .menu {
     display: flex;
     flex-direction: row;
@@ -608,7 +608,7 @@ hr {
     font-family: var(--primary-font-family);
     color: var(--color-text-main);
 }
-
+*/
 .stale-link {
     background-color: var(--color-border-light);
     color: var(--color-text-sub) !important;
@@ -624,7 +624,7 @@ hr {
 
 #markdown-toc li {
     margin-left: 1rem;
-    list-style: decimal;
+    /* list-style: decimal; */
 }
 
 #markdown-toc li * {
@@ -633,7 +633,7 @@ hr {
 
 #markdown-toc {
     padding: 1.5em;
-    list-style: decimal;
+    list-style: none; 
     display: inline-block;
     background: var(--color-bg-main);
     width: 100%;

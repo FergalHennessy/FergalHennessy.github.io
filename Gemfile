@@ -35,3 +35,4 @@ gem 'kramdown-math-katex'
 gem "webrick", "~> 1.7"
 #apparently there are issues with later sassc
 gem 'sassc', '~> 2.1.0'
+# gem 'jekyll-toc'
